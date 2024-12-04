@@ -1,0 +1,32 @@
+cmake_minimum_required(VERSION 3.10)
+
+project(MyProject)
+
+set(CMAKE_CXX_STANDARD 17)
+
+# Include Google Test using FetchContent
+include(FetchContent)
+FetchContent_Declare(
+  googletest
+  URL https://github.com/google/googletest/archive/refs/tags/release-1.11.0.zip
+)
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+FetchContent_MakeAvailable(googletest)
+
+# Add executable
+add_executable(runTests
+    FileDataBase.cpp
+    RecommendCommand.cpp
+    RecommendCommandTest.cpp
+    User.cpp
+    Movie.cpp
+    Input.cpp
+    Output.cpp
+    DataBaseServices.cpp
+    DataBaseServicesTest.cpp
+    ParseInput.cpp
+    
+)
+
+# Link Google Test
+target_link_libraries(runTests gtest_main)

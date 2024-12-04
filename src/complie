@@ -1,0 +1,6 @@
+g++ -std=c++17 -g -DDEBUG -o RecommendationApp main.cpp RecommendCommand.cpp FileDataBase.cpp User.cpp Movie.cpp Input.cpp Output.cpp App.cpp ParseInput.cpp DataBaseServices.cpp
+
+
+
+g++ -std=c++17 -g -DDEBUG -o App  RecommendCommand.cpp App.cpp FileDataBase.cpp DataBaseServices.cpp RecommendCommand.cpp Input.cpp Output.cpp Movie.cpp User.cpp ParseInput.cpp main.cpp
+Add.cpp
